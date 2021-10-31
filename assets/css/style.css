@@ -1,0 +1,135 @@
+/* variables */
+:root {
+    --bold-font: 700;
+    --bolder-font: 900;
+    --bg-color: #1F2021;
+    --primary-color: #00C7FC;
+    --pg-color: #C4C4C4;
+    --line-height: 1.7;
+    --transition: 0.3s;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    height: 10000px;
+}
+
+/* CSS resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    margin: 0 5rem;
+    padding: 2rem 1rem;
+    border-bottom: 1px solid #777;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+nav ul {
+    display: flex;
+}
+nav ul a {
+    color: white;
+}
+nav ul li {
+    padding: 0 1.5rem;
+    text-transform: uppercase;
+    font-weight: var(--bold-font);
+    margin: auto;
+    font-size: 0.9rem;
+}
+nav ul li:last-of-type {
+    padding-right: 0;
+}
+/* header  */
+header {
+    background-image: url(/assets/images/slider/bg2.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+}
+header .cursors {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+}
+.cursors > a {
+    color: white;
+    border: 1px solid white;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 55px;
+    font-size: 40px;
+    top: 50%;
+}
+.cursors .left-arr {
+    left: 50px;
+}
+.cursors .right-arr {
+    right: 50px;
+}
+
+header .main-content {
+    position: absolute;
+    top: calc(50% - 120px);
+    width: 70%;
+    background-color: #0D5F75;
+    opacity: 0.8;
+    color: white;
+    padding: 3rem 2rem 3rem 200px;
+}
+header .main-content h3 {
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 50px;
+    margin-bottom: 25px;
+}
+header .main-content p {
+    line-height: 28px;
+    font-size: 13px;
+}
+header .three-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+}
+header .three-dots span {
+    display: inline-block;
+}
+.three-dots span::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin: 0 3px;
+    cursor: pointer;
+}
+.three-dots span.active::before {
+    background-color: var(--primary-color);
+    border-color: transparent;
+}
